@@ -1,1 +1,15 @@
-= link_to "Webmil", root_path, :class => 'brand'
+#menu
+  %nav
+    %ul.menu
+      %li#home
+        %a{:href => "index.html"} Home
+      %li#work
+        %a{:href => "work.html"} Work
+      %li#team
+        %a{:href => "team.html"} Team
+      %li#contact
+        %a{:href => "contact.html"} Contact
+
+  .logo
+    %a{href: "index.html"}
+      %img{src: "images/logo.png", alt: "Webmil"}
