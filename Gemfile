@@ -17,3 +17,4 @@ gem "machinist", :group => :test
 gem "factory_girl_rails", ">= 1.7.0", :group => :test
 gem "email_spec", ">= 1.2.1", :group => :test
 gem "bootstrap-sass", ">= 2.0.1"
+gem 'formtastic'
