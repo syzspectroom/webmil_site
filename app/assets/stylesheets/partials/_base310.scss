@@ -1,0 +1,129 @@
+$base-color: #2daebf;
+
+h2, h5{
+    line-height: normal;
+}
+h6{
+    padding: 5px;
+    width: 150px;
+    text-align: left;
+    font-size: 14px;
+}
+.container{
+    min-width: $base-width;
+    width: auto !important;
+    padding-top: 18px;
+}
+.content {
+    @include container;
+    padding: 0;
+    margin-bottom: 50px;
+}
+.header{
+    position: static;
+    margin: 0;
+    min-width: $base-width;
+    width: auto !important;
+    background: none;
+    height: 130px;
+    header{
+        height: 130px;
+        position: relative;
+        #menu{
+            @include container;
+            .logo{
+                @include column(4, true);
+                @include prepend(3);
+            }
+            nav ul{
+                display: none !important;
+            }
+            nav select {
+                @include column(4);
+                display: block;
+                float: right;
+                position: absolute;
+                left: 25%;
+                bottom: 0;
+            }
+        }
+    }
+}
+footer{
+    min-width: $base-width;
+    .footer-container{
+        @include container;
+        .sitemap{
+            display: none;
+        }
+        .resources{
+            @include column(2, true);
+        }
+        .tweet{
+            display: none;
+        }
+        .address{
+            @include column(5, true);
+        }
+        .social{
+            display: none;
+        }
+    }
+}
+
+// Slider
+/* Default MovingBoxes wrapper size */
+#movingboxes {
+    min-height: 150px;
+    width: 310px;
+}
+
+/* Panel Wrapper */
+.mb-slider, .mb-scroll {
+    height: 150px;
+}
+.mb-inside img{
+    width: 666px;
+    height: 150px;
+}
+.slider-txt{
+    left: 10%;
+    top: 70%;
+    p{
+        display: none;
+    }
+}
+/* Slider panel */
+.mb-slider .mb-panel {
+    width: 310px;
+}
+/* Left & Right Navigation Arrows */
+a.mb-scrollButtons {
+    width: 28px;
+    height: 28px;
+    background: transparent asset-url("arrows_l.png", image) no-repeat;
+    margin-top: -14px;
+}
+
+// articles development, web design, complex websites
+.development, .web-design, .complex-websites{
+    @include column(8, true);
+}
+
+//team list, clients
+.our-team, .clients{
+    @include column(8, true);
+    .employees li{
+        margin: 15px 10px 0 0;
+    }
+}
+// works list
+.work{
+    @include column(8);
+}
+.work-item, .work-item-last{
+    @include column(8, true);
+    margin-top: 30px;
+    figcaption{
+    }
+}

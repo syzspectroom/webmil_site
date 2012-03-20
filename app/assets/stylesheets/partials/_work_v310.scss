@@ -1,0 +1,25 @@
+.work-open-v{
+    .ipad{
+        @include column (8, true);
+        height: 400px;
+        i.frame{
+            display: none;
+        }
+        img{
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 400px;
+        }
+    }
+    .desc{
+        @include column(8, true);
+        @include prepend(0);
+        p{
+            text-align: left;
+        }
+        h3{
+            margin: 20px 0 5px 0;
+        }
+    }
+}

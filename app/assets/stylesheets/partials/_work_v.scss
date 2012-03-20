@@ -1,0 +1,43 @@
+.work-open-v{
+    .ipad{
+        @include column (17);
+        margin-top: 45px;
+        position: relative;
+        i.frame{
+            
+            background: asset-url("ipad1.png", image) no-repeat;
+            display: block;
+            height: 860px;
+            width: 673px;
+            position: relative;
+            z-index: 90;
+        }
+        img{
+            position: absolute;
+            top: 84px;
+            left: 75px;
+            width: 525px;
+            height: 695px;
+            z-index: 1;
+        }
+    }
+    .desc{
+        @include column(6, true);
+        @include prepend(1);
+        margin-top: 44px;
+        p{
+            text-align: right;
+        }
+        h3{
+            margin: 70px 0 5px 0;
+        }
+        p.name{
+            text-align: left;
+        }
+        p.description{
+            text-align: left;
+            margin-top: 40px;
+        }
+
+    }
+}

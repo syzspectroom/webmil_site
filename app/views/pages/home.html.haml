@@ -1,0 +1,86 @@
+%ul#slider
+  %li
+    = image_tag 'foto.png', alt: '#'
+    .slider-txt
+      %h6 Webmil team
+      %p Evident in plants, animals, the shape of galaxies, and even your DNA, this proportionality blueprint is so pervasive that humans have noticed it for thousands of years. We’ve used it, too — it can be seen in art and architecture 
+
+.content
+  .home
+    %section.development
+      %h2 Development
+      %p It is easy to dive in and start building an idea. The hard part is converting it into design strategy that people understand and convert into a product.
+      %p We love the challenge of application design. It has been our bread and butter since 1998.
+    %section.web-design
+      %h2 Web design
+      %p Customers spend more time on the web using mobile devices than using desktop.
+      %p Narrow screen constraints, unique interaction patterns, and individual context make mobile design an awesome challenge we excel at.
+    %section.complex-websites
+      %h2 Complex Websites
+      %p Gone are the days of static ‘brochure’ websites. Today we help businesses attract customers and make money online.
+      %p This means creating a marketing site with functional components and messaging that drives people to take action.
+    %section.work
+      %h2 Latest Works
+      %ul
+        %li.work-item
+          %figure
+            %a{href: "work_open_h.html"}
+              = image_tag 'work1.png', alt: 'Work'
+            %figcaption
+              %a{href: "work_open_h.html"}
+                %h5
+                  Західні Енергетичні Транзити
+                  %span.next
+        %li.work-item
+          %figure
+            %a{href: "work_open_h.html"}
+              = image_tag 'work1.png', alt: 'Work'
+            %figcaption
+              %a{href: "work_open_h.html"}
+                %h5
+                  Західні Енергетичні Транзити
+                  %span.next
+        %li.work-item-last
+          %figure
+            %a{href: "work_open_h.html"}
+              = image_tag 'work1.png', alt: 'Work'
+            %figcaption
+              %a{href: "work_open_h.html"}
+                %h5
+                  Західні Енергетичні Транзити
+                  %span.next
+    %section.about-us
+      %h2 About Us
+      %p We're not just a web design agency. We're not just a graphic design firm. We're not just coders, and we're not just artists. We're a team of T-shaped interaction designers and design strategists who help grow businesses. (Oh, and we're not just dudes with expensive chairs, either.)
+      %p To get an idea of how we work, take a look at one of our extranet sites. It's a project we did for a nonprofit in 24 coffee-fueled hours.
+      %p We're not just a web design agency. We're not just a graphic design firm. We're not just coders, and we're not just artists. We're a team of T-shaped interaction designers and design strategists who help grow businesses. (Oh, and we're not just dudes with expensive chairs, either.)
+      %p o get an idea of how we work, take a look at one of our extranet sites. It's a project we did for a nonprofit in 24 coffee-fueled hours.
+    %section.latest-blog
+      %h2 Latest Blog Posts
+      %p We write about interaction design, design strategy, and more in our blog.
+      %a{href: "#"} What We Learned from Open Source in 2011
+      %p
+        %time{datetime:"2011-12-23"}
+          December 23, 2011
+        by Jonathan• 
+        %span{value: 1} 1 Comments
+      %a{href: "#"} What We Learned from Open Source in 2011
+      %p
+        %time{datetime:"2011-12-23"}
+          December 23, 2011
+        by Jonathan•
+        %span{value: 1} 1 Comments
+      %a{href: "#"} What We Learned from Open Source in 2011
+      %p
+        %time{datetime:"2011-12-23"}
+          December 23, 2011
+        by Jonathan•
+        %span{value: 1} 1 Comments
+      %a{href: "#"} What We Learned from Open Source in 2011
+      %p
+        %time{datetime:"2011-12-23"}
+          December 23, 2011
+        by Jonathan•
+        %span{value: 1} 1 Comments
+    = render 'team_members'
+    = render 'clients_list'

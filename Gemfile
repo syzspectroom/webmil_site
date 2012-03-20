@@ -8,7 +8,7 @@ group :assets do
   gem 'compass-rails'
 end
 
-gem 'simple_form'
+gem 'active_link_to'
 gem 'jquery-rails', '2.0.0'
 gem "haml", ">= 3.1.4"
 gem "haml-rails", ">= 0.3.4", :group => :development

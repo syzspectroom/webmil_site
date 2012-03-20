@@ -2,14 +2,12 @@
   %nav
     %ul.menu
       %li#home
-        %a{:href => "index.html"} Home
+        = active_link_to 'Home', root_path
       %li#work
-        %a{:href => "work.html"} Work
+        = active_link_to 'Work', works_path
       %li#team
-        %a{:href => "team.html"} Team
+        = active_link_to 'Team', team_path
       %li#contact
-        %a{:href => "contact.html"} Contact
-
+        = active_link_to 'Contact', contacts_path
   .logo
-    %a{href: "index.html"}
-      %img{src: "images/logo.png", alt: "Webmil"}
+    = link_to image_tag('logo.png', alt: 'Webmil'), root_path

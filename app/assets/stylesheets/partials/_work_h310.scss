@@ -1,0 +1,50 @@
+.work-open-h{
+    h3{
+        margin: 20px 0 5px 0;
+        line-height: normal;
+        a{
+            float: none;
+            margin-top: 0;
+            font-size: 14px;
+        }
+    }
+    p.desc{
+        @include column (8, true);
+        @include prepend(0);
+    }
+    .ipad{
+        @include column (8, true);
+        @include prepend(0);
+        height: 200px;
+        i.frame{
+            display: none;
+        }
+        img{
+            top: 0px;
+            left: 5px;
+            height: 200px;
+            width: 310px;
+        }
+    }
+    .booklet{
+        @include column (8, true);
+        img{
+            width: 310px;
+            height: 200px;
+        }
+    }
+    .city-light{
+        @include column (8, true);
+        @include prepend(0);
+        height: 450px;
+        i.frame{
+            display: none;
+        }
+        img{
+            top: 0px;
+            left: 5px;
+            height: 450px;
+            width: 280px;
+        }
+    }
+}

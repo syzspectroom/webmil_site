@@ -3,17 +3,17 @@
   %head
     %meta{charset: "utf-8"}
     %meta{name: "viewport", content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"}
-    %title Webmil
+    %title 
+      =title
     = stylesheet_link_tag 'screen', media: 'screen'
     = stylesheet_link_tag '310', media: 'screen and (max-width: 350px)'
     = stylesheet_link_tag 'print', media: 'print'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&subset=latin,cyrillic'
 
     /[if lt IE 9]
       = javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js'
-    %link{'rel' => 'stylesheet', 'href' => 'http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&subset=latin,cyrillic'}
-    %script{type: 'text/javascript', src: 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'}
-    %script{type: 'text/javascript', src: 'js/resize.js'}
-    %script{type: 'text/javascript', src: 'js/jquery.movingboxes.js'}
+    = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'  
+
   %body
     .header
       %header
@@ -28,13 +28,13 @@
           %h4 Sitemap
           %ul
             %li
-              %a{:href => "#"} home
+              = link_to 'home', root_path
             %li
-              %a{:href => "#"} work
+              = link_to 'work', works_path
             %li
-              %a{:href => "#"} team
+              = link_to 'team', team_path
             %li
-              %a{:href => "#"} contact
+              = link_to 'contact', contacts_path
         .resources
           %h4 Resources
           %ul
@@ -60,7 +60,6 @@
             .mail{itemprop: "email"} info@webmil.com.ua
             .locality{itemprop: "addressLocality"} Україна, Івано-Франківськ,
             .street{itemprop: "streetAddress"} вул. Української Дивізії, 5а
-          %a{href: "#"} Map &amp; directions
+          = link_to 'Map & directions' , '#'
         .social
-          %a{:href => "#"}
-            %img{src: "images/face.png", alt: "face" }
+          = link_to image_tag('face.png'), 'http://facebook.com'
