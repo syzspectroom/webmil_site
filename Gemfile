@@ -22,3 +22,5 @@ gem 'annotate', '~> 2.4.1.beta', group: :development
 gem 'activeadmin'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'formtastic'
+
