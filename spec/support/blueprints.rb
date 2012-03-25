@@ -15,3 +15,7 @@ end
 Work.blueprint do
   # Attributes here
 end
+
+Picture.blueprint do
+  # Attributes here
+end
