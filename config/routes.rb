@@ -1,4 +1,8 @@
 Webmil::Application.routes.draw do
+  get "work/index"
+
+  get "work/show"
+
   ActiveAdmin.routes(self)
 
   devise_for :admin_users, ActiveAdmin::Devise.config
