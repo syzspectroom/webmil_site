@@ -16,5 +16,50 @@
 require 'spec_helper'
 
 describe Work do
-  pending "add some examples to (or delete) #{__FILE__}"
+  
+  it "should not be valid without name" do
+  	build(:work, name: "").should_not be_valid
+  end
+
+  it "should not be valid with name length over 50 letters" do
+  	build(:work, name: rand(36**51).to_s(36)).should_not be_valid
+  end
+
+  it "should not be valid with name length less than 3 letters" do
+  	build(:work, name: rand(36**2).to_s(36)).should_not be_valid
+  end
+
+  it "should not be valid without url" do
+  	build(:work, url: '').should_not be_valid
+  end
+
+  it "should not be valid with wrong url" do
+  	build(:work, url: 'wrong').should_not be_valid
+  end
+
+  it "should not be valid without image" do
+  	build(:work, main_image: '').should_not be_valid
+  end
+
+  it "should be valid with url, name and main_image" do
+  	build(:work).should be_valid
+  end
+
+  describe "with pictures" do
+
+    before(:each) do
+      @work  = create(:work)
+    end
+
+    it "should have a pictures method" do
+      @work.should respond_to(:pictures)
+    end
+
+    it "should not be valid with empty picture" do
+      
+      @work.pictures.build.should_not be_valid
+    end
+
+  end
+
 end

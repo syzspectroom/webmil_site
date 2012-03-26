@@ -1,3 +1,4 @@
+
 # encoding: utf-8
 
 class MainPageUploader < CarrierWave::Uploader::Base

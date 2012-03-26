@@ -20,8 +20,9 @@ class Work < ActiveRecord::Base
 	accepts_nested_attributes_for :pictures, allow_destroy: true
 
 
-  	mount_uploader :main_image, MainPageUploader
+	mount_uploader :main_image, MainPageUploader
 
-	validates :name, presence: true, length: { maximum: 50 }
-	validates :url, length: { maximum: 50 }
+	validates :main_image, presence: true
+	validates :name, presence: true, length: { maximum: 50, minimum: 3 }
+	validates :url, length: { maximum: 50 } , url: true
 end

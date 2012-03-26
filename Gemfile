@@ -14,8 +14,9 @@ gem "haml", ">= 3.1.4"
 gem "haml-rails", ">= 0.3.4", :group => :development
 gem "rspec-rails", ">= 2.8.1", :group => [:development, :test]
 gem "machinist", :group => :test
-gem "factory_girl_rails", ">= 1.7.0", :group => :test
+gem "factory_girl_rails", git: 'https://github.com/thoughtbot/factory_girl_rails.git', :group => :test
 gem "email_spec", ">= 1.2.1", :group => :test
+gem "webrat", group: :test
 gem "bootstrap-sass", ">= 2.0.1"
 
 gem 'annotate', '~> 2.4.1.beta', group: :development
@@ -24,3 +25,4 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'formtastic'
 
+gem 'addressable'
