@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
   	@title = 'Home'
+    @works = Work.for_main_page
   end
 
   def works

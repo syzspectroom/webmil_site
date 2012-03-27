@@ -19,36 +19,11 @@
       %h2 Complex Websites
       %p Gone are the days of static ‘brochure’ websites. Today we help businesses attract customers and make money online.
       %p This means creating a marketing site with functional components and messaging that drives people to take action.
-    %section.work
-      %h2 Latest Works
-      %ul
-        %li.work-item
-          %figure
-            %a{href: "work_open_h.html"}
-              = image_tag 'work1.png', alt: 'Work'
-            %figcaption
-              %a{href: "work_open_h.html"}
-                %h5
-                  Західні Енергетичні Транзити
-                  %span.next
-        %li.work-item
-          %figure
-            %a{href: "work_open_h.html"}
-              = image_tag 'work1.png', alt: 'Work'
-            %figcaption
-              %a{href: "work_open_h.html"}
-                %h5
-                  Західні Енергетичні Транзити
-                  %span.next
-        %li.work-item-last
-          %figure
-            %a{href: "work_open_h.html"}
-              = image_tag 'work1.png', alt: 'Work'
-            %figcaption
-              %a{href: "work_open_h.html"}
-                %h5
-                  Західні Енергетичні Транзити
-                  %span.next
+    - if @works.count > 0 
+      %section.work
+        %h2 Latest Works
+        %ul
+          = render partial:'work', collection: @works
     %section.about-us
       %h2 About Us
       %p We're not just a web design agency. We're not just a graphic design firm. We're not just coders, and we're not just artists. We're a team of T-shaped interaction designers and design strategists who help grow businesses. (Oh, and we're not just dudes with expensive chairs, either.)

@@ -1,0 +1,9 @@
+%li.work-item
+  %figure
+    %a{href: "work_open_h.html"}
+      = image_tag(work.main_image.url, alt: work.name) unless work.main_image?
+    %figcaption
+      %a{href: "work_open_h.html"}
+        %h5
+          = work.name
+          %span.next
