@@ -13,6 +13,15 @@ describe PagesController do
     it "should have 'Webmil | Home' title" do
       response.should have_selector('title', content: 'Webmil | Home')
     end
+    it "should not have 'Latest works' section without db records" do
+      response.should_not have_selector('h2', content: 'Latest Works')
+    end
+    it "should have 'Latest works' section when db record exists" do
+      create(:work, show_on_mine_page: true)
+      get :home
+      response.should have_selector('h2', content: 'Latest Works')
+    end
+
   end
 
 

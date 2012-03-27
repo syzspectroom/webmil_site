@@ -46,7 +46,6 @@ describe Work do
   end
 
   describe "with pictures" do
-
     before(:each) do
       @work  = create(:work)
     end
@@ -56,10 +55,24 @@ describe Work do
     end
 
     it "should not be valid with empty picture" do
-      
       @work.pictures.build.should_not be_valid
     end
+  end
 
+  it "should have the scope for_main_page" do
+    Work.should respond_to(:for_main_page)
+  end
+
+  describe "on main page" do
+    it "should include with show_on_mine_page flag" do
+      work_for_main_page = create(:work, show_on_mine_page: true)
+      Work.for_main_page.should include(work_for_main_page) 
+    end
+
+    it "should not include work without show_on_mine_page flag" do
+      work_not_for_main_page = create(:work)
+      Work.for_main_page.should_not include(work_not_for_main_page) 
+    end
   end
 
 end
