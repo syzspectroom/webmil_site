@@ -1,11 +1,15 @@
 require 'spec_helper'
 
 describe WorkController do
+  render_views
 
   describe "GET 'index'" do
+    before {  get 'index'}
     it "returns http success" do
-      get 'index'
       response.should be_success
+    end
+    it "should have 'Webmil | Works' title" do
+      response.should have_selector('title', content: 'Webmil | Works')
     end
   end
 

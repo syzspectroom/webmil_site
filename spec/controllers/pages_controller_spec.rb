@@ -24,20 +24,6 @@ describe PagesController do
 
   end
 
-
-  describe "GET 'works'" do
-
-    before {get 'works'}
-
-    it "returns http success" do
-      response.should be_success
-    end
-
-    it "should have 'Webmil | Works' title" do
-      response.should have_selector('title', content: 'Webmil | Works')
-    end
-  end
-
   describe "GET 'team'" do
     
     before {get 'team'}

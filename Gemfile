@@ -26,3 +26,4 @@ gem 'mini_magick'
 gem 'formtastic'
 
 gem 'addressable'
+gem 'stringex' #slug generator

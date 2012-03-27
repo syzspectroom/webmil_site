@@ -1,5 +1,20 @@
 ActiveAdmin.register Work do
   # form :partial => "works_form"
+  
+  around_filter do |controller, action|
+    Work.class_eval do
+      alias :__active_admin_to_param :to_param
+      def to_param() id.to_s end
+    end
+
+    begin
+      action.call
+    ensure
+      Work.class_eval do
+        alias :to_param :__active_admin_to_param
+      end
+    end
+  end
 
   form html: { enctype: "multipart/form-data" } do |f|
     f.inputs do
@@ -30,5 +45,5 @@ ActiveAdmin.register Work do
  	  
  	  default_actions
   end
-  
+
 end

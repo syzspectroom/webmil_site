@@ -11,6 +11,7 @@
 #  show_on_mine_page :boolean
 #  created_at        :datetime        not null
 #  updated_at        :datetime        not null
+#  slug              :string(255)
 #
 
 require 'spec_helper'
@@ -22,7 +23,7 @@ describe Work do
   end
 
   it "should not be valid with name length over 50 letters" do
-  	build(:work, name: rand(36**51).to_s(36)).should_not be_valid
+  	build(:work, name: rand(36**60).to_s(36)).should_not be_valid
   end
 
   it "should not be valid with name length less than 3 letters" do
@@ -92,4 +93,31 @@ describe Work do
     end
   end
 
+  describe "slug" do
+    it "should not be nil" do
+      work = create(:work)
+      work.slug.should_not be_nil
+    end
+
+    it "should not be empty" do
+      work = create(:work)
+      work.slug.should_not be_empty
+    end
+
+    it "should be unique" do
+      work1 = create(:work, name: 'test name')
+      work2 = create(:work, name: 'test name')
+
+      work1.slug.should_not be_equal work2.slug
+    end
+  end
+
+  it "shoud have scope find_by_slug" do
+    Work.should respond_to(:find_by_slug)
+  end
+
+  it "find by slug" do
+    work = create(:work, name: 'new test name')
+    Work.find_by_slug(work.name.to_url).should include work
+  end  
 end

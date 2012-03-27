@@ -1,2 +1,5 @@
-%h1 Work#index
-%p Find me in app/views/work/index.html.haml
+.content
+  %section.work
+    %ul
+      = render partial:'work', collection: @works
+

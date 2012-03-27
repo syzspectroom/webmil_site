@@ -4,10 +4,6 @@ class PagesController < ApplicationController
     @works = Work.for_main_page
   end
 
-  def works
-  	@title = 'Works'
-  end
-
   def team
   	@title = 'Team'
   end
