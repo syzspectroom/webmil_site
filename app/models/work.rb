@@ -20,7 +20,7 @@ class Work < ActiveRecord::Base
 	accepts_nested_attributes_for :pictures, allow_destroy: true
 
 
-	scope :for_main_page, where(show_on_mine_page: true).order("created_at desc").limit(3)
+	scope :for_main_page, where(show_on_mine_page: true).order("created_at asc").limit(3)
 
 	mount_uploader :main_image, MainPageUploader
 

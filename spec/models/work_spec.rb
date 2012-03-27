@@ -73,6 +73,23 @@ describe Work do
       work_not_for_main_page = create(:work)
       Work.for_main_page.should_not include(work_not_for_main_page) 
     end
+
+    it "should include only 3 works" do
+      4.times do |n|
+        create(:work, name:"work#{n}", show_on_mine_page: true)
+      end
+
+      Work.for_main_page.count.should equal 3
+    end
+
+    it "should include only latest works" do
+      works = Hash.new
+      4.times do |n|
+        works[n.to_s] = create(:work, name:"work#{n}", show_on_mine_page: true)
+      end
+
+      Work.for_main_page.should_not include(works.first)
+    end
   end
 
 end
