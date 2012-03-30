@@ -1,3 +1,5 @@
+// @import "formtastic";
+
 .left-address{
     @include column(5);
     .address{
@@ -46,6 +48,16 @@
         margin-top: 20px;
     }
 }
+
+
+form.formtastic fieldset > ol > li.error input, form.formtastic fieldset > ol > li.error textarea{
+    border: 1px solid #eb7272;
+    &:hover{
+        border: 1px solid #eb7272;
+    }
+}
+
+
 form{
     @include column(18, true);
     margin-top: 40px;

@@ -24,6 +24,7 @@ gem 'activeadmin', git: 'https://github.com/gregbell/active_admin.git'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'formtastic'
+gem "dynamic_form"
 
 gem 'addressable'
 gem 'stringex' #slug generator

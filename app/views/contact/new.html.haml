@@ -30,19 +30,17 @@
     %h2 Contact Us
     %p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     
-  = form_tag contact_path do
+  = semantic_form_for @message, :url => contact_path(@message), :html => { :method => :post } do |f|
     .form
-      = label :message, :name, 'Name'
-      = text_field :message, :name, {:id => 'name', :class => 'error'}
-      %span Please enter your Name
-      = label :mesage, :subject, 'Subject'
-      = text_field :message, :subject, {:id => 'subject'}
-      = label :mesage, :email, 'E-mail'
-      = text_field :message, :email, {:id => 'email'}
-      = label :mesage, :body, 'Message'
-      = text_area :mesage, :body, {:id => "message"}
-      .send
-        =submit_tag "Send", {:class => 'send-button'}
-
-
-  
+      =f.inputs do
+        = f.input :name, as: :string, required: true, input_html: { required: true }
+        / -if =f.semantic_errors :name any?
+        =f.semantic_errors :name
+        = f.input :subject, required: true
+        =f.semantic_errors :subject
+        = f.input :email, :as => :email, required: true
+        =f.semantic_errors :email
+        = f.input :body, :as => :text, :label => 'Message', required: true
+        =f.semantic_errors :body
+        .send
+          =submit_tag "Send", {:class => 'send-button'}
