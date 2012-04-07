@@ -24,8 +24,12 @@ class Work < ActiveRecord::Base
 
 
 	scope :for_main_page, where(show_on_mine_page: true).order("created_at asc").limit(3)
-	scope :find_by_slug, (lambda { |slug| where("slug = ?", slug).joins(:pictures).first unless slug.nil? })
+	# scope :find_by_slug, (lambda { |slug| where("slug = ?", slug).joins(:pictures).first unless slug.nil? })
 	
+
+	def self.find_by_slug slug
+		where("slug = ?", slug).joins(:pictures).first unless slug.nil?	
+	end
 
 	mount_uploader :main_image, MainPageUploader
 
