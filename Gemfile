@@ -28,3 +28,7 @@ gem "dynamic_form"
 
 gem 'addressable'
 gem 'stringex' #slug generator
+gem "cucumber-rails", group: :test
+gem "database_cleaner", group: :test
+gem 'capybara', group: :test
+gem 'spork-rails', group: :test
