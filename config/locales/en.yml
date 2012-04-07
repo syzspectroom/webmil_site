@@ -2,4 +2,20 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
+  activerecord:
+    errors:
+      messages:
+        blank: "123"
+    models: 
+      message: "Customer"
+    attributes:
+      user:
+        message: "Email address"
+    errors:
+      models:
+        message:
+          attributes:
+            email:
+              blank: "fcuk"
+
   hello: "Hello world"

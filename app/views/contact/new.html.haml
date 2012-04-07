@@ -33,14 +33,9 @@
   = semantic_form_for @message, :url => contact_path(@message), :html => { :method => :post } do |f|
     .form
       =f.inputs do
-        = f.input :name, as: :string, required: true, input_html: { required: true }
-        / -if =f.semantic_errors :name any?
-        =f.semantic_errors :name
-        = f.input :subject, required: true
-        =f.semantic_errors :subject
-        = f.input :email, :as => :email, required: true
-        =f.semantic_errors :email
-        = f.input :body, :as => :text, :label => 'Message', required: true
-        =f.semantic_errors :body
+        = f.input :name, as: :string
+        = f.input :subject
+        = f.input :email, :as => :email
+        = f.input :body, :as => :text, :label => 'Message'
         .send
           =submit_tag "Send", {:class => 'send-button'}
