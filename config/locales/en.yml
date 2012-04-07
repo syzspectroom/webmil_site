@@ -14,6 +14,7 @@ en:
           attributes:
             email:
               blank: "Email can't be blank"
+              invalid: 'Email should have format "mail@example.com"'
             name:
               blank: "Name can't be blank"
             subject:

@@ -1,11 +1,10 @@
 class NotificationsMailer < ActionMailer::Base
 
-  default :from => "info@webmil.com.ua"
-  default :to => "imsashko@gmail.com"
+  default :to => "info@webmil.com.ua"
 
   def new_message(message)
-    @message = message
-    mail(:subject => "[YourWebsite.tld] #{message.subject}")
+  	body = message.name + ": " + message.body
+    mail(:subject => "Message from site #{message.subject}", :body => body, from: message.email)
   end
 
 end
