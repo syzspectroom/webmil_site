@@ -2,12 +2,9 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  activerecord:
-    errors:
-      messages:
-        blank: "123"
+  activemodel:
     models: 
-      message: "Customer"
+      message: "Message"
     attributes:
       user:
         message: "Email address"
@@ -16,6 +13,12 @@ en:
         message:
           attributes:
             email:
-              blank: "fcuk"
+              blank: "Email can't be blank"
+            name:
+              blank: "Name can't be blank"
+            subject:
+              blank: "Subject can't be blank"
+            body:
+              blank: "Body can't be blank"
 
   hello: "Hello world"
