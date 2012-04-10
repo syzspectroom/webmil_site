@@ -1,0 +1,26 @@
+
+// To configure blueprint, edit the partials/_base.sass file.
+@import "partials/basegrid310";
+
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint/liquid";
+
+$base-width: 310px;
+
+//import base rules
+@import "partials/base310";
+
+//import home page rules
+@import "partials/home310";
+
+//import team page rules
+@import "partials/team310";
+
+//import team page rules
+@import "partials/contacts310";
+
+//import portfolio vertical page rules
+@import "partials/work_v310";
+
+//import portfolio horizontal page rules
+@import "partials/work_h310";

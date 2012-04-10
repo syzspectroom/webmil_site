@@ -1,0 +1,9 @@
+%li{ class: (cycle('work-item','work-item','work-item-last'))}
+  %figure
+    = link_to image_tag(work.main_image.url, alt: work.name), work
+    %figcaption
+      %h5
+        = link_to work.name, work
+        %span.next
+    %p.desc
+      = work.short_description

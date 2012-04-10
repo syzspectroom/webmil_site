@@ -1,0 +1,65 @@
+!!!
+%html
+  %head
+    %meta{charset: "utf-8"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"}
+    %title 
+      =title
+    = stylesheet_link_tag 'screen', media: 'screen'
+    = stylesheet_link_tag '310', media: 'screen and (max-width: 350px)'
+    = stylesheet_link_tag 'print', media: 'print'
+    = stylesheet_link_tag 'http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow&subset=latin,cyrillic'
+
+    /[if lt IE 9]
+      = javascript_include_tag 'http://html5shiv.googlecode.com/svn/trunk/html5.js'
+    = javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'  
+
+  %body
+    .header
+      %header
+        = render 'layouts/navigation'
+        
+    .container
+      = yield
+      .footer-push
+    %footer
+      .footer-container
+        .sitemap
+          %h4 Sitemap
+          %ul
+            %li
+              = link_to 'home', root_path
+            %li
+              = link_to 'work', works_path
+            %li
+              = link_to 'team', team_path
+            %li
+              = link_to 'contact', contacts_path
+        .resources
+          %h4 Resources
+          %ul
+            %li
+              %a{:href => "#"} facebook
+            %li
+              %a{:href => "#"} twitter
+            %li
+              %a{:href => "#"} RSS feed
+            %li
+              %a{:href => "#"} tumblr
+        .tweet
+          %h4 What we're into right now
+          %p 
+            The @namename site we've been working on for @namename1 has won redesign of the year at the UK eCommerce awards. Back slaps all round!
+            %span
+          %span @webmillab
+        .address{itemscope: true,  itemtype: "http://schema.org/Organization"}
+          %h4 Get in touch with us
+          %meta{itemprop: "name", content: "Webmil"}
+          %address{itemscope: true, itemprop: "address" ,itemtype: "http://schema.org/PostalAddress"}
+            .tel{itemprop: "telephone"} +38 (0342) 735 448
+            .mail{itemprop: "email"} info@webmil.com.ua
+            .locality{itemprop: "addressLocality"} Україна, Івано-Франківськ,
+            .street{itemprop: "streetAddress"} вул. Української Дивізії, 5а
+          = link_to 'Map & directions' , '#'
+        .social
+          = link_to image_tag('face.png'), 'http://facebook.com'

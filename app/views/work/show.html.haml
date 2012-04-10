@@ -1,0 +1,13 @@
+.content
+  .work-open-h
+    %h3
+      = @work.name
+      = link_to '← back', works_path
+    %p
+      = link_to @work.url, @work.url
+    %p.desc 
+      = @work.description
+      - @work.pictures.each do |p|
+        .booklet
+          = image_tag(p.image.url, alt: p.title)
+    

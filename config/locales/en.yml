@@ -1,0 +1,25 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  activemodel:
+    models: 
+      message: "Message"
+    attributes:
+      user:
+        message: "Email address"
+    errors:
+      models:
+        message:
+          attributes:
+            email:
+              blank: "Email can't be blank"
+              invalid: 'Email should have format "mail@example.com"'
+            name:
+              blank: "Name can't be blank"
+            subject:
+              blank: "Subject can't be blank"
+            body:
+              blank: "Body can't be blank"
+
+  hello: "Hello world"

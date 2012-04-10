@@ -1,0 +1,7 @@
+%li.work-item
+  %figure
+    = link_to image_tag(work.main_image.url, alt: work.name), work
+    %figcaption
+      %h5
+        = link_to work.name, work
+        %span.next

@@ -1,0 +1,248 @@
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/contacts" for 127.0.0.1 at 2012-04-07 22:12:59 +0300
+Processing by ContactController#new as HTML
+  Rendered contact/new.html.haml within layouts/application (1216.9ms)
+  Rendered layouts/_navigation.html.haml (7.5ms)
+Completed 200 OK in 1699ms (Views: 1591.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/contacts" for 127.0.0.1 at 2012-04-07 22:14:02 +0300
+Processing by ContactController#new as HTML
+  Rendered contact/new.html.haml within layouts/application (1193.2ms)
+  Rendered layouts/_navigation.html.haml (7.2ms)
+Completed 200 OK in 1747ms (Views: 1641.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (1.3ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/contacts" for 127.0.0.1 at 2012-04-07 22:14:52 +0300
+Processing by ContactController#new as HTML
+  Rendered contact/new.html.haml within layouts/application (1224.3ms)
+  Rendered layouts/_navigation.html.haml (7.5ms)
+Completed 200 OK in 1793ms (Views: 1684.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2012-04-07 22:14:54 +0300
+Processing by ContactController#create as HTML
+  Parameters: {"utf8"=>"✓", "message"=>{"name"=>"name", "subject"=>"subject", "email"=>"imsashko@gmail.com", "body"=>"message"}, "commit"=>"Send"}
+
+Sent mail to info@webmil.com.ua (368ms)
+Date: Sat, 07 Apr 2012 22:14:56 +0300
+From: imsashko@gmail.com
+To: info@webmil.com.ua
+Message-ID: <4f809230178b7_43e1376ce3050620@sasha-HP-Compaq-6735s.mail>
+Subject: Message from site subject
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+name: message
+Redirected to http://www.example.com/contacts
+Completed 302 Found in 1216ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2012-04-07 22:14:56 +0300
+Processing by ContactController#new as HTML
+  Rendered contact/new.html.haml within layouts/application (25.0ms)
+  Rendered layouts/_navigation.html.haml (2.3ms)
+Completed 200 OK in 141ms (Views: 140.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (1.5ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/contacts" for 127.0.0.1 at 2012-04-07 22:19:29 +0300
+Processing by ContactController#new as HTML
+  Rendered contact/new.html.haml within layouts/application (1191.6ms)
+  Rendered layouts/_navigation.html.haml (7.8ms)
+Completed 200 OK in 1658ms (Views: 1645.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2012-04-07 22:19:32 +0300
+Processing by ContactController#create as HTML
+  Parameters: {"utf8"=>"✓", "message"=>{"name"=>"name", "subject"=>"subject", "email"=>"imsashko@gmail.com", "body"=>"message"}, "commit"=>"Send"}
+
+Sent mail to info@webmil.com.ua (356ms)
+Date: Sat, 07 Apr 2012 22:19:33 +0300
+From: imsashko@gmail.com
+To: info@webmil.com.ua
+Message-ID: <4f80934540832_49673767ae850667@sasha-HP-Compaq-6735s.mail>
+Subject: Message from site subject
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+name: message
+Redirected to http://www.example.com/contacts
+Completed 302 Found in 1185ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2012-04-07 22:19:33 +0300
+Processing by ContactController#new as HTML
+  Rendered contact/new.html.haml within layouts/application (21.4ms)
+  Rendered layouts/_navigation.html.haml (2.2ms)
+Completed 200 OK in 131ms (Views: 130.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (1.5ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/contacts" for 127.0.0.1 at 2012-04-07 22:20:39 +0300
+Processing by ContactController#new as HTML
+  Rendered contact/new.html.haml within layouts/application (1225.6ms)
+  Rendered layouts/_navigation.html.haml (105.4ms)
+Completed 200 OK in 1686ms (Views: 1673.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2012-04-07 22:20:42 +0300
+Processing by ContactController#create as HTML
+  Parameters: {"utf8"=>"✓", "message"=>{"name"=>"name", "subject"=>"subject", "email"=>"imsashko@gmail.com", "body"=>"message"}, "commit"=>"Send"}
+
+Sent mail to info@webmil.com.ua (356ms)
+Date: Sat, 07 Apr 2012 22:20:43 +0300
+From: imsashko@gmail.com
+To: info@webmil.com.ua
+Message-ID: <4f80938b7198d_4afc374f268506c6@sasha-HP-Compaq-6735s.mail>
+Subject: Message from site subject
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+name: message
+Redirected to http://www.example.com/contacts
+Completed 302 Found in 1183ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2012-04-07 22:20:43 +0300
+Processing by ContactController#new as HTML
+  Rendered contact/new.html.haml within layouts/application (120.4ms)
+  Rendered layouts/_navigation.html.haml (2.4ms)
+Completed 200 OK in 133ms (Views: 132.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (1.0ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/contacts" for 127.0.0.1 at 2012-04-07 22:22:16 +0300
+Processing by ContactController#new as HTML
+  Rendered contact/new.html.haml within layouts/application (1191.7ms)
+  Rendered layouts/_navigation.html.haml (106.1ms)
+Completed 200 OK in 1657ms (Views: 1644.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2012-04-07 22:22:19 +0300
+Processing by ContactController#create as HTML
+  Parameters: {"utf8"=>"✓", "message"=>{"name"=>"name", "subject"=>"subject", "email"=>"imsashko@gmail.com", "body"=>"message"}, "commit"=>"Send"}
+
+Sent mail to info@webmil.com.ua (356ms)
+Date: Sat, 07 Apr 2012 22:22:20 +0300
+From: imsashko@gmail.com
+To: info@webmil.com.ua
+Message-ID: <4f8093ec894e3_4d0e373b7a450610@sasha-HP-Compaq-6735s.mail>
+Subject: Message from site subject
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+name: message
+Redirected to http://www.example.com/contacts
+Completed 302 Found in 1204ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2012-04-07 22:22:20 +0300
+Processing by ContactController#new as HTML
+  Rendered contact/new.html.haml within layouts/application (117.8ms)
+  Rendered layouts/_navigation.html.haml (2.4ms)
+Completed 200 OK in 130ms (Views: 129.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (1.9ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/contacts" for 127.0.0.1 at 2012-04-07 22:23:42 +0300
+Processing by ContactController#new as HTML
+  Rendered contact/new.html.haml within layouts/application (1201.6ms)
+  Rendered layouts/_navigation.html.haml (103.3ms)
+Completed 200 OK in 1668ms (Views: 1654.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2012-04-07 22:23:45 +0300
+Processing by ContactController#create as HTML
+  Parameters: {"utf8"=>"✓", "message"=>{"name"=>"name", "subject"=>"subject", "email"=>"imsashko@gmail.com", "body"=>"message"}, "commit"=>"Send"}
+
+Sent mail to info@webmil.com.ua (354ms)
+Date: Sat, 07 Apr 2012 22:23:46 +0300
+From: imsashko@gmail.com
+To: info@webmil.com.ua
+Message-ID: <4f80944292dbf_4ee2372a6ac50650@sasha-HP-Compaq-6735s.mail>
+Subject: Message from site subject
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+name: message
+Redirected to http://www.example.com/contacts
+Completed 302 Found in 1174ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2012-04-07 22:23:46 +0300
+Processing by ContactController#new as HTML
+  Rendered contact/new.html.haml within layouts/application (117.7ms)
+  Rendered layouts/_navigation.html.haml (2.3ms)
+Completed 200 OK in 130ms (Views: 129.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+
+
+Started GET "/contacts" for 127.0.0.1 at 2012-04-07 22:24:39 +0300
+Processing by ContactController#new as HTML
+  Rendered contact/new.html.haml within layouts/application (1225.7ms)
+  Rendered layouts/_navigation.html.haml (103.7ms)
+Completed 200 OK in 1688ms (Views: 1675.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/contacts" for 127.0.0.1 at 2012-04-07 22:24:42 +0300
+Processing by ContactController#create as HTML
+  Parameters: {"utf8"=>"✓", "message"=>{"name"=>"name", "subject"=>"subject", "email"=>"imsashko@gmail.com", "body"=>"message"}, "commit"=>"Send"}
+
+Sent mail to info@webmil.com.ua (354ms)
+Date: Sat, 07 Apr 2012 22:24:43 +0300
+From: imsashko@gmail.com
+To: info@webmil.com.ua
+Message-ID: <4f80947b99aa2_50293712e085067f@sasha-HP-Compaq-6735s.mail>
+Subject: Message from site subject
+Mime-Version: 1.0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+name: message
+Redirected to http://www.example.com/contacts
+Completed 302 Found in 1182ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2012-04-07 22:24:43 +0300
+Processing by ContactController#new as HTML
+  Rendered contact/new.html.haml within layouts/application (117.8ms)
+  Rendered layouts/_navigation.html.haml (2.2ms)
+Completed 200 OK in 130ms (Views: 129.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction

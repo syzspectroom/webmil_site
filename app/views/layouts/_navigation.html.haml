@@ -1,0 +1,13 @@
+#menu
+  %nav
+    %ul.menu
+      %li#home
+        = active_link_to 'Home', root_path
+      %li#work
+        = active_link_to 'Work', works_path
+      %li#team
+        = active_link_to 'Team', team_path
+      %li#contact
+        = active_link_to 'Contact', contacts_path
+  .logo
+    = link_to image_tag('logo.png', alt: 'Webmil'), root_path
