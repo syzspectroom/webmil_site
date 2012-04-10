@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 gem 'rails', '3.2.2'
 gem 'sqlite3'
+gem 'mysql'
+
 group :assets do
   gem 'sass-rails',   '~> 3.2.4'
   gem 'coffee-rails', '~> 3.2.1'
@@ -32,3 +34,6 @@ gem "cucumber-rails", group: :test
 gem "database_cleaner", group: :test
 gem 'capybara', group: :test
 gem 'spork-rails'
+
+gem 'capistrano'
+gem 'unicorn'
