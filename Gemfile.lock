@@ -23,7 +23,7 @@ GIT
       railties (>= 3.0.0)
 
 GEM
-  remote: git://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     actionmailer (3.2.2)
       actionpack (= 3.2.2)
