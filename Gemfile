@@ -22,7 +22,7 @@ gem "webrat", group: :test
 gem "bootstrap-sass", ">= 2.0.1"
 
 gem 'annotate', '~> 2.4.1.beta', group: :development
-gem 'activeadmin', git: 'git://github.com/gregbell/active_admin.git'
+gem 'activeadmin'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'formtastic'
