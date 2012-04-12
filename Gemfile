@@ -39,4 +39,4 @@ gem 'capistrano'
 gem 'unicorn'
 
 gem "execjs"
-gem "therubyracer", :require => 'v8'
+gem "therubyracer"
