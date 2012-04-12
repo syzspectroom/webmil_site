@@ -37,5 +37,3 @@ gem 'spork-rails'
 
 gem 'capistrano'
 gem 'unicorn'
-
-gem "execjs"
