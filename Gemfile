@@ -39,4 +39,3 @@ gem 'capistrano'
 gem 'unicorn'
 
 gem "execjs"
-gem "therubyracer"
