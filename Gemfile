@@ -37,3 +37,5 @@ gem 'spork-rails'
 
 gem 'capistrano'
 gem 'unicorn'
+
+gem 'therubyracer', :platforms => :ruby
