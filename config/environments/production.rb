@@ -3,7 +3,7 @@ Webmil::Application.configure do
 
   # Code is not reloaded between requests
   config.cache_classes = true
-  # config.assets.precompile += %w( 310.css print.css ie.css screen.css)
+  config.assets.precompile += %w( 310.css print.css ie.css screen.css)
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = false
   config.action_controller.perform_caching = true
@@ -12,10 +12,10 @@ Webmil::Application.configure do
   config.serve_static_assets = false
 
   # Compress JavaScripts and CSS
-  config.assets.compress = false
+  config.assets.compress = true
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = true
+  config.assets.compile = false
 
   # Generate digests for assets URLs
   config.assets.digest = true
