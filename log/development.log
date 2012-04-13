@@ -12536,3 +12536,14 @@ DEPRECATION WARNING: ActiveSupport::Memoizable is deprecated and will be removed
   [1m[36m (88.4ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120325023352')[0m
   [1m[35m (88.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20120320215241')
   [1m[36m (88.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20120320222712')[0m
+DEPRECATION WARNING: ActiveSupport::Memoizable is deprecated and will be removed in future releases,simply use Ruby memoization pattern instead. (called from <top (required)> at /home/sasha/Rails/webmil/config/environment.rb:5)
+
+
+Started GET "/contacts" for 127.0.0.1 at 2012-04-13 03:02:11 +0300
+Processing by ContactController#new as HTML
+  Rendered contact/new.html.haml within layouts/application (1171.4ms)
+Compiled screen.css  (2855ms)  (pid 20576)
+Compiled 310.css  (762ms)  (pid 20576)
+Compiled print.css  (9ms)  (pid 20576)
+  Rendered layouts/_navigation.html.haml (9.5ms)
+Completed 200 OK in 5362ms (Views: 5353.7ms | ActiveRecord: 0.0ms)
