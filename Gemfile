@@ -38,8 +38,12 @@ gem 'spork-rails'
 gem 'capistrano'
 gem 'unicorn'
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 gem 'therubyracer', :platforms => :ruby
+=======
+gem 'therubyracer'
+>>>>>>> parent of 0176d38... Another https-to-git try
 =======
 gem 'therubyracer'
 >>>>>>> parent of 0176d38... Another https-to-git try
